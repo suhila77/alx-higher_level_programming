@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''Module for Base class.'''
 
-class Bass:
-    '''Arepresentation of the base of our OOP hierarchy.'''
+
+class Base:
+    '''A representation of the base of our OOP hierarchy.'''
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        '''Constructor.'''
+        '''contructor.'''
         if id is not None:
             self.id = id
         else:

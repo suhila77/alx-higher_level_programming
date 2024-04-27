@@ -20,7 +20,7 @@ class Rectangle(Base):
 
         @width.setter
         def width(self, value):
-            self.validate_integer("height", value, False)
+            self.validate_integer("width", value, False)
             self.__width = value
 
         @property
@@ -53,7 +53,7 @@ class Rectangle(Base):
             self.validate_integer("y", value)
             self.__y = value
 
-        def validate_integer(self, name, value, eg=True):
+        def validate_integer(self, name, value, eq=True):
             '''Method for validating the value.'''
             if type(value) != int:
                 raise TypeError("{} must be an integer".format(name))
@@ -61,6 +61,4 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(name))
             elif not eq and value <= 0:
                 raise ValueError("{} must be > 0".format(name))
-
-
 
